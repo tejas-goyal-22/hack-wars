@@ -1,0 +1,1414 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Chakra Petch", "Black Ops One", 'Roboto Slab', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    min-height: 100vh;
+}
+
+/* TEXT AND FONTS ----------------------------------------------------------------------------------------------- */
+#heropara {
+    color: #9AC3FF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Black Ops One", system-ui;
+    font-size: 5.5rem;
+    text-align: center;
+}
+
+.sectionheading {
+    font-family: "Black Ops One", system-ui;
+    font-size: 5.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* HAMBURGER MENU BUTTON------------------------------------------------------------------------------------------ */
+
+.hamburgerbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+}
+
+.line {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+/* NAVIGATION PANEL------------------------------------------------------------------------------------------ */
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 6rem;
+    transition: background 0.3s ease;
+    z-index: 1200;
+}
+
+nav.background {
+    background: rgba(0, 0, 0, 0.9);
+    /* Background color for when menu is opened */
+}
+
+#navcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1800px;
+}
+
+nav.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.logo{
+    font-family: "black ops one";
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.desktopnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.desktopnavbtn {
+    padding: .75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.desktopnavbtn:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #ffffff,
+        0 0 25px #ffffff,
+        0 0 50px #ffffff,
+        0 0 100px #ffffff;
+
+}
+
+#navregisterbtn {
+    padding: .75rem 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+#navregisterbtn:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+}
+
+.fullsidebarcontainer {
+    position: fixed;
+    display: flex;
+    top: 96px;
+    right: -100%;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fullsidebarcontainer.visible {
+    right: 0%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.mobilenav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+#emptyspace {
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mobilenav li {
+    width: 100%;
+    border-bottom: 1px solid rgba(154, 194, 255, 0.4);
+}
+
+.mobilenav li:last-child {
+    border-bottom: none;
+}
+
+.mobilenavnavbtn {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+#navregisterbtnmobile {
+    font-weight: 700;
+}
+
+/* HERO SECTION --------------------------------------------------------------------------------------- */
+
+#heroandnav {
+    display: flex;
+    justify-content: center;
+    background-image: url('imgs/panoramic-view-dubai-city-illuminated-neon-spectrum\ 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.herotxtandfloatingimgcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: min-content;
+    align-items: center;
+    overflow: visible;
+    /*testing.........................................  */
+
+}
+
+#herotext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: max-content;
+    margin-top: 10rem;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.avatar {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* hero registration button ----------------------------------------------------------------------------------- */
+#heroregisterbtn {
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+:root {
+    --glow-color: #61efff;
+}
+
+.glowing-btn {
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: rgba(0, 0, 0, 0.9);
+    perspective: 2em;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+    opacity: 0.7;
+    animation: faulty-flicker 2s linear infinite;
+}
+
+/* .glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+} */
+
+.glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+    animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.glowing-btn:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+.glowing-btn:hover:after {
+    opacity: 1;
+}
+
+@keyframes faulty-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 0.1;
+    }
+
+    4% {
+        opacity: 0.5;
+    }
+
+    19% {
+        opacity: 0.5;
+    }
+
+    21% {
+        opacity: 0.1;
+    }
+
+    23% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    83% {
+        opacity: 0.4;
+    }
+
+    87% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    72% {
+        opacity: 0.2;
+    }
+
+    77% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes border-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.1;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* social buttons --------------------------------------------------------------------------------- */
+
+#socialcontainer {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+}
+
+#socialcontainer a img {
+    width: 1.75rem;
+}
+
+
+/* TRACKS SECTION -------------------------------------------------------------------------------------------- */
+#tracks {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    gap: 1.25rem;
+    padding: 10rem 6rem 5rem 6rem;
+}
+
+#tracksection1 {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    gap: 1.25rem;
+    flex-direction: column;
+}
+
+#trackheading {
+    border: 1px solid white;
+    border-radius: .75rem;
+    height: 100%;
+    padding: 2rem;
+}
+
+#tracktext {
+    border: 1px solid white;
+    border-radius: .75rem;
+    height: 100%;
+    padding: 2rem;
+}
+
+#tracktext ul li {
+    list-style: decimal;
+    text-align: justify;
+    font-size: 1.25rem;
+}
+
+#tracksection2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: .75rem;
+    border: 1px solid white;
+    border-radius: .75rem;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.trackbtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: .25rem;
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.trackbtns:hover {
+    background-color: white;
+    color: #000000;
+    font-weight: 800;
+}
+
+/* SCHEDULE SECTION --------------------------------------------------------------------------------------------- */
+
+#schedulesection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('imgs/a-potrait-image-of-a-super-hero-standing-straight-in-middle-of-a-destroyed-city---dark--716632373\ 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 6rem 5rem 6rem;
+}
+
+.leftaligncontainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.rightaligncontainer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+.scheduleinfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: .75rem;
+    text-align: center;
+    max-width: 60%;
+    padding: 2rem;
+}
+
+.scheduleinfoheading {
+    font-size: 2rem;
+}
+
+.scheduletxt {
+    font-size: 1.25rem;
+}
+
+.lineconnector {
+    width: 1px;
+    height: 100px;
+    background-color: white;
+}
+
+/* PRIZE SECTION ------------------------------------------------------------------------------------ */
+
+#prizesection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    background-image: url('imgs/Group\ 47.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 6rem 5rem 6rem;
+}
+
+#prizecontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.onep {
+    order: 1;
+    margin-top: 120px;
+    border: 5px solid #888888;
+}
+
+.onep .ammount {
+    color: #888888;
+}
+
+.twop {
+    order: 2;
+    margin-top: -120px;
+    border: 5px solid goldenrod;
+}
+
+.twop .ammount {
+    color: goldenrod;
+}
+
+.threep {
+    order: 3;
+    margin-top: 120px;
+    border: 5px solid coral;
+}
+
+.threep .ammount {
+    color: coral;
+}
+
+.prizeinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    width: 30%;
+    aspect-ratio: 1 / 0.75;
+    /* border: 4px solid white; */
+    border-radius: .5rem;
+    background-color: #000000;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1rem;
+}
+
+.ammount {
+    font-family: "black ops one";
+    font-size: 3rem;
+}
+
+.prizetag {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* SPONSOR SECTION -------------------------------------------------------------------------------------------- */
+
+#sponsorsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 4rem 6rem 5rem 6rem;
+}
+
+.sponsercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.sponsorinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30%;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.sponsorinfo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sponsOrtext {
+    background-image: linear-gradient(to right, #949494, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: auto;
+    width: max-content;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.sponsorbtn {
+    max-width: 20rem;
+}
+
+/* FAQ SECTION ------------------------------------------------------------------------------------------------- */
+
+#faqsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 4rem 6rem 5rem 6rem;
+}
+
+.faqsectioncontainer {
+    width: 100%;
+    max-width: 1600px;
+}
+
+.accordion-button {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid white;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 100%;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+
+
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+
+.accordion-button:hover {
+    background-color: #303030;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    background-color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+
+.accordion-content p {
+    margin: 1rem 0;
+}
+
+.accordion-button::after {
+    content: '+';
+    font-size: 18px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active::after {
+    content: '-';
+}
+
+
+/* FOOTER WITH MEDIA QUERIES ------------------------------------------------------------------------ */
+.footercontainer {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 4rem 6rem 2.5rem 6rem;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ffffff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/* BACK TO TOP BUTTON ------------------------------------------------------------------------------ */
+#buttontotop {
+    display: inline-block;
+    background-color: #000000;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#buttontotop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#buttontotop:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#buttontotop:active {
+    background-color: #555;
+}
+
+#buttontotop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* MEDIA QUERIES ------------------------------------------------------------------------------------------------ */
+
+@media (min-aspect-ratio: 1/1) {
+    #heroandnav {
+
+        height: 120vh;
+    }
+}
+
+/* FOR LANDSCAPE MODE TESTING (if causes issue remove it) ---------------------------------------------------------- */
+@media (min-aspect-ratio: 2.75/1) {
+    #heroandnav {
+
+        height: 230vh;
+    }
+
+    #heroregisterbtn {
+        top: 180vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #socialcontainer {
+        top: 100vh;
+        left: 10%;
+    }
+}
+
+@media(max-width: 1024px) {
+    nav {
+        padding: 1rem 3rem 1rem 4rem;
+    }
+
+    .hamburgerbtn {
+        display: block;
+    }
+
+    .desktopnav {
+        display: none;
+    }
+
+    #navregisterbtn {
+        display: none;
+    }
+
+    /* text ------------------------------------------------------------------------ */
+    #heropara {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    /* track section ------------------------------------------------------------------ */
+
+    #tracks {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 8rem 4rem 4rem 4rem;
+    }
+
+    #trackheading {
+        border: none;
+        padding: 2rem 2rem 1rem;
+    }
+
+    #tracksection2 {
+        gap: 1rem;
+        border: none;
+        padding: 0%;
+    }
+
+    /* schedule section ----------------------------- */
+
+    #schedulesection {
+        padding: 5rem 4rem 3rem 4rem;
+    }
+
+    .leftaligncontainer {
+        justify-content: center;
+    }
+
+    .rightaligncontainer {
+        justify-content: center;
+    }
+
+    .scheduleinfo {
+        max-width: 80%;
+    }
+
+    .sectionheading {
+        font-size: 4rem;
+    }
+
+    /* prize section ----------------------------------------------------------------------------------- */
+
+    #prizesection {
+        padding: 5rem 4rem 3rem 4rem;
+
+    }
+
+    #prizecontainer {
+        gap: 1.5rem;
+    }
+
+    .prizeinfo {
+        gap: 1rem;
+        width: 100%;
+        padding: .75rem;
+    }
+
+    .ammount {
+        font-family: "black ops one";
+        font-size: 2.5rem;
+    }
+
+    .prizetag {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    /* sponsor section ---------------------------------------------------------------------------------- */
+
+    #sponsorsection {
+        padding: 5rem 4rem 3rem 4rem;
+    }
+
+    .sponsorinfo {
+        min-width: 30%;
+        margin-bottom: 4rem;
+    }
+
+    .sponsercontainer {
+        justify-content: space-evenly;
+        gap: 1.25rem;
+    }
+
+    .sponsOrtext {
+        font-size: 1.75rem;
+    }
+
+    /* FAQ SECTION ------------------------------------------------------------------------------------------------- */
+
+    #faqsection {
+        gap: 1.25rem;
+        padding: 5rem 4rem 3rem 4rem;
+    }
+
+    .accordion-content p {
+        margin: 1rem 0;
+    }
+
+
+    .footer {
+        background-color: #24262b;
+        padding: 5rem 4rem 2rem 4rem;
+    }
+
+}
+
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 4.75rem;
+    }
+
+    nav {
+        padding: 1rem 2.5rem 1 rem 3rem;
+    }
+
+    /* track section ------------------------------------------------------------------------------ */
+    #tracks {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 8rem 3rem 4rem 3rem;
+    }
+
+    /* schedule section ----------------------------- */
+    #schedulesection {
+        padding: 5rem 3rem;
+    }
+
+
+    .scheduleinfo {
+        max-width: 90%;
+        padding: 1.25rem;
+    }
+
+    .sectionheading {
+        font-size: 3rem;
+    }
+
+    .lineconnector {
+        height: 80px;
+    }
+
+    /* prize section --------------------------------------------------------------------------------- */
+    #prizesection {
+        padding: 5rem 3rem;
+
+    }
+
+    #prizecontainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .onep {
+        order: 2;
+        margin-top: 0px;
+    }
+
+
+    .twop {
+        order: 1;
+        margin-top: 0px;
+    }
+
+    .threep {
+        order: 3;
+        margin-top: 0px;
+    }
+
+    .prizeinfo {
+        gap: 1rem;
+        width: 70%;
+    }
+
+    /* sponsor section ---------------------------------------------------------------------------------- */
+
+    #sponsorsection {
+        padding: 5rem 3rem;
+    }
+
+    .sponsorinfo {
+        min-width: 30%;
+        margin-bottom: 3rem;
+    }
+
+    .sponsercontainer {
+        justify-content: space-evenly;
+        gap: 1.25rem;
+    }
+
+    .sponsOrtext {
+        font-size: 1.75rem;
+    }
+
+    /* FAQ SECTION ------------------------------------------------------------------------------------------------- */
+
+    #faqsection {
+        gap: 1.25rem;
+        padding: 5rem 3rem;
+    }
+
+    .accordion-content p {
+        margin: 1rem 0;
+    }
+
+
+    .footer {
+        background-color: #24262b;
+        padding: 5rem 2rem;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    /* navigation panel ------------------------------------------ */
+    nav {
+        padding: .5rem .75rem .5rem 1.25rem;
+    }
+
+    .fullsidebarcontainer {
+        top: 80px;
+    }
+
+    #heropara {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -35px;
+    }
+
+    .avatar {
+        width: 110%;
+        height: 90%;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        transform: translatey(0px);
+        animation: float 6s ease-in-out infinite;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    #tracks {
+        padding: 4rem 1.25rem;
+    }
+
+    /* schedule section ----------------------------- */
+
+    #schedulesection {
+        padding: 5rem 1.25rem;
+    }
+
+    .scheduleinfo {
+        max-width: 100%;
+    }
+
+    .sectionheading {
+        font-size: 2.75rem;
+    }
+
+    /* prize section ----------------------------------------------------------------------------------- */
+    #prizesection {
+        padding: 5rem 1.25rem;
+
+    }
+
+    #prizecontainer {
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .prizeinfo {
+        width: 100%;
+    }
+
+    .ammount {
+        font-family: "black ops one";
+        font-size: 3rem;
+    }
+
+    .prizetag {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    /* sponsor section ---------------------------------------------------------------------------------- */
+
+    #sponsorsection {
+        padding: 5rem 1.5rem;
+    }
+
+    .sponsorinfo {
+        min-width: 50%;
+        margin-bottom: 1.5rem;
+    }
+
+    .sponsercontainer {
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+
+    .sponsOrtext {
+        font-size: 1.75rem;
+    }
+
+    .sponsorbtn {
+        margin-top: 2rem;
+        max-width: 15rem;
+    }
+
+    /* FAQ SECTION ------------------------------------------------------------------------------------------------- */
+
+    #faqsection {
+        gap: 1.25rem;
+        padding: 5rem 1.5rem;
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .accordion-content p {
+        margin: 1rem 0;
+    }
+
+
+    .footer {
+        background-color: #24262b;
+        padding: 5rem 1.5rem 1.5rem;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .glowing-btn {
+        font-size: 1.5em;
+    }
+}

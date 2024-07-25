@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACK WARS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <a id="buttontotop"></a>
+    <section id="heroandnav">
+        <section id="hero">
+            <nav>
+                <div id="navcontainer">
+                    <a href="#" class="logo">HACK WARS</a>
+
+                    <ul class="desktopnav">
+                        <li><a href="#" class="desktopnavbtn">Home</a></li>
+                        <li><a href="#schedulesection" class="desktopnavbtn">Schedule</a></li>
+                        <li><a href="#faqsection" class="desktopnavbtn">FAQ's</a></li>
+                        <li><a href="#sponsorsection" class="desktopnavbtn">Partners</a></li>
+                    </ul>
+
+                    <a href="#" id="navregisterbtn">Register Now</a>
+
+                    <button type="button" class="hamburgerbtn" onclick="toggleMenu()" aria-label="Main Menu">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <path class="line line1"
+                                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3"
+                                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                    <div class="fullsidebarcontainer">
+                        <div id="emptyspace" onclick="closeMenu()"></div>
+                        <ul class="mobilenav">
+                            <li><a href="#" class="mobilenavnavbtn">Home</a></li>
+                            <li><a href="#tracks" class="mobilenavnavbtn">Tracks</a></li>
+                            <li><a href="#schedulesection" class="mobilenavnavbtn">Schedule</a></li>
+                            <li><a href="#prizesection" class="mobilenavnavbtn">Prizes</a></li>
+                            <li><a href="#sponsorsection" class="mobilenavnavbtn">Partners</a></li>
+                            <li><a href="#faqsection" class="mobilenavnavbtn">FAQ's</a></li>
+                            <li><a href="#" class="mobilenavnavbtn" id="navregisterbtnmobile">Register Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="herotxtandfloatingimgcontainer">
+                <div id="herotext">
+                    <p id="heropara">A 24 HOUR HACKATHON HAPPENING AT CHANDIGARH UNIVERSITY</p>
+                    <h1>HACK-WARS IS HERE</h1>
+                </div>
+                <div class="container">
+                    <div class="avatar">
+                        <img src="imgs/file 2.png" alt="HeroImage">
+                    </div>
+                </div>
+
+                <button type="button" id="heroregisterbtn" class='glowing-btn' onclick="location.href='#';"><span
+                        class='glowing-txt'>REGI<span class='faulty-letter'>STER</span>&nbsp;NOW&nbsp;</span></button>
+            </div>
+            <div id="socialcontainer">
+                <a href="#" id="discord"><img src="imgs/discord-svgrepo-com.svg" alt="Discord"></a>
+                <a href="https://www.instagram.com/csi.cu?igsh=MTN2ZTY3a2E5dXllNw%3D%3D&utm_source=qr" id="instagram"><img src="imgs/instagram-svgrepo-com.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/computer-society-of-india-cusb/" id="linkdin"><img src="imgs/linkedin-161-svgrepo-com.svg" alt="Linkdin"></a>
+            </div>
+
+        </section>
+    </section>
+
+    <section id="tracks">
+        <div id="tracksection1">
+            <div id="trackheading">
+                <h1>TRACKS</h1>
+            </div>
+            <div id="tracktext">
+                <ul>
+                    <li><b>Open Innovation:</b> Lorem Ispum cant rois and porimse niga and create </li>
+                    <li><b>AI/ML:</b> Lorem Ispum cant rois and porimse niga and create </li>
+                    <li><b>BLOCKCHAIN</b> Lorem Ispum cant rois and porimse niga and create </li>
+                </ul>
+            </div>
+        </div>
+        <div id="tracksection2">
+            <a href="#" class="trackbtns">OPEN INNOVATION</a>
+            <a href="#" class="trackbtns">AI/ML</a>
+            <a href="#" class="trackbtns">BLOCKCHAIN</a>
+        </div>
+    </section>
+
+    <section id="schedulesection">
+        <h1 class="sectionheading">SCHEDULE</h1>
+        <div class="leftaligncontainer">
+            <div class="scheduleinfo">
+                <p class="scheduletxt"><span class="scheduleinfoheading"><b>1<br>Release<br></b></span><b>30th July</b> - The launch of 
+                    Hack-Wars , you can now register and submit your proposals.</p>
+            </div>
+        </div>
+
+        <div class="lineconnector"></div>
+
+        <div class="rightaligncontainer">
+            <div class="scheduleinfo">
+                <p class="scheduletxt"><span class="scheduleinfoheading"><b>2<br>Combat<br></b></span><b>15th August</b> - The Registrations end now and 
+                the shorlisted teams will begin to recieve RSVPs. </p>
+            </div>
+        </div>
+
+        <div class="lineconnector"></div>
+
+        <div class="leftaligncontainer">
+            <div class="scheduleinfo">
+                <p class="scheduletxt"><span class="scheduleinfoheading"><b>3<br>Endgame<br></b></span><b>21-22 September</b>The Registrations end now and 
+                    the shorlisted teams will begin to recieve RSVPs.</p>
+            </div>
+        </div>
+
+        <div class="lineconnector"></div>
+
+        <div class="rightaligncontainer">
+            <div class="scheduleinfo">
+                <p class="scheduletxt"><span class="scheduleinfoheading"><b>4<br>Verdict<br></b></span><b>22 September</b>
+                Felicitation Ceremony - Announcement of Winners and Closing Ceremony. </p>
+            </div>
+        </div>
+    </section>
+    <section id="prizesection">
+        <h1 class="sectionheading">PRIZES</h1>
+        <div id="prizecontainer">
+            <div class="prizeinfo twop">
+                <p class="ammount">RS 60000</p>
+                <p class="prizetag">THE AVENGERS</p>
+            </div>
+            <div class="prizeinfo onep">
+                <p class="ammount">RS40000</p>
+                <p class="prizetag">THE DEFENDERS</p>
+            </div>
+            <div class="prizeinfo threep">
+                <p class="ammount">RS 30000</p>
+                <p class="prizetag">THE GARDIANS</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsorsection">
+        <h1 class="sectionheading">SPONSORS</h1>
+        <div class="sponsercontainer">
+            <div class="sponsorinfo">
+                <p class="sponsOrtext">titleSponse<b>r.Com</b></p>
+            </div>
+            <div class="sponsorinfo">
+                <p class="sponsOrtext">titleSponse<b>r.Com</b></p>
+            </div>
+            <div class="sponsorinfo">
+                <p class="sponsOrtext">titleSponse<b>r.Com</b></p>
+            </div>
+            <div class="sponsorinfo">
+                <p class="sponsOrtext">titleSponse<b>r.Com</b></p>
+            </div>
+            <div class="sponsorinfo">
+                <p class="sponsOrtext">titleSponse<b>r.Com</b></p>
+            </div>
+            <div class="sponsorinfo">
+                <p class="sponsOrtext">titleSponse<b>r.Com</b></p>
+            </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1-CbttCPYI7NfuGtYdbaLexoFc0HQNQ17/view?usp=sharing" class="trackbtns sponsorbtn">SPONSOR US</a>
+    </section>
+
+    <section id="faqsection">
+        <div class="faqsectioncontainer">
+            <h1 class="sectionheading">ANY DOUBTS?</h1>
+            <div class="accordion">
+                <button class="accordion-button">Is there a registration fees for the hackathon ?</button>
+                <div class="accordion-content">
+                    <p>Nada. Its free of cost.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-button">How many members can form a team ?</button>
+                <div class="accordion-content">
+                    <p>You can have 3-5 members in each team.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-button">What about the accomodation and food ?</button>
+                <div class="accordion-content">
+                    <p>The accomodation and food will be taken care of by the organisers.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-button">Do we need a fully functional project for phase 1 ?</button>
+                <div class="accordion-content">
+                    <p>No , In Phase 1 only idea submission / prototype is required.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-button">Will there be goodies and swag</button>
+                <div class="accordion-content">
+                    <p>Yes , goodies and swags will be provided to all the participants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footercontainer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>CONTACT US</h4>
+                    <ul>
+                        <li><a href="#">csi.cu@cumail.in</a></li>
+                        <li><a href="#">+91 9833975069</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="#">TRACKS</a></li>
+                        <li><a href="#">SCHEDULE</a></li>
+                        <li><a href="#">PRIZES</a></li>
+                        <li><a href="#">SPONSORS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1-CbttCPYI7NfuGtYdbaLexoFc0HQNQ17/view?usp=sharing">Sponsorship Brochure</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+
+                        <a href="https://www.instagram.com/csi.cu?igsh=MTN2ZTY3a2E5dXllNw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/computer-society-of-india-cusb/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        © 2024 HACK WARS. ALL RIGHTS RESERVED.
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+
+</html>
